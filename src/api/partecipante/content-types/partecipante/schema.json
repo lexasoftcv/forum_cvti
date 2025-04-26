@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partecipantes",
+  "info": {
+    "singularName": "partecipante",
+    "pluralName": "partecipantes",
+    "displayName": "partecipante"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "nome": {
+      "type": "text"
+    },
+    "sobrenome": {
+      "type": "string"
+    },
+    "titulo": {
+      "type": "text"
+    },
+    "genero": {
+      "type": "string"
+    },
+    "telemovel": {
+      "type": "integer"
+    },
+    "url_linkedin": {
+      "type": "text"
+    },
+    "foto_perfil": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "tipo_organizacao": {
+      "type": "text"
+    },
+    "nome_organizacao": {
+      "type": "text"
+    },
+    "cargo": {
+      "type": "text"
+    },
+    "nacionalidade": {
+      "type": "text"
+    },
+    "cidade": {
+      "type": "text"
+    },
+    "area_sede_organizacao": {
+      "type": "text"
+    },
+    "localidade_sede_organizacao": {
+      "type": "text"
+    },
+    "pais_atuacao": {
+      "type": "text"
+    },
+    "setor_principal_da_organizacao": {
+      "type": "text"
+    },
+    "montante_investimento": {
+      "type": "decimal"
+    },
+    "about_me": {
+      "type": "text"
+    }
+  }
+}
