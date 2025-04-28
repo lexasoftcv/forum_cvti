@@ -369,6 +369,41 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiB2BB2B extends Struct.CollectionTypeSchema {
+  collectionName: 'b2bs';
+  info: {
+    displayName: 'b2b';
+    pluralName: 'b2bs';
+    singularName: 'b2b';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    annual_turnover: Schema.Attribute.Text;
+    company_size: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    interest_detail: Schema.Attribute.Text;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::b2b.b2b'>;
+    main_attending_objectives: Schema.Attribute.Text;
+    partnership_types: Schema.Attribute.Text;
+    priority_sector: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    type_of_investment: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPartecipantePartecipante
   extends Struct.CollectionTypeSchema {
   collectionName: 'partecipantes';
@@ -929,6 +964,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::b2b.b2b': ApiB2BB2B;
       'api::partecipante.partecipante': ApiPartecipantePartecipante;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

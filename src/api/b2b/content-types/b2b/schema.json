@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "b2bs",
+  "info": {
+    "singularName": "b2b",
+    "pluralName": "b2bs",
+    "displayName": "b2b"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "company_size": {
+      "type": "text"
+    },
+    "annual_turnover": {
+      "type": "text"
+    },
+    "priority_sector": {
+      "type": "text"
+    },
+    "interest_detail": {
+      "type": "text"
+    },
+    "partnership_types": {
+      "type": "text"
+    },
+    "type_of_investment": {
+      "type": "text"
+    },
+    "main_attending_objectives": {
+      "type": "text"
+    }
+  }
+}
