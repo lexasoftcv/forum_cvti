@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiB2BB2B extends Struct.CollectionTypeSchema {
   collectionName: 'b2bs';
   info: {
+    description: '';
     displayName: 'b2b';
     pluralName: 'b2bs';
     singularName: 'b2b';
@@ -391,12 +392,17 @@ export interface ApiB2BB2B extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     interest_detail: Schema.Attribute.Text;
+    investment_size: Schema.Attribute.Text;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::b2b.b2b'>;
     main_attending_objectives: Schema.Attribute.Text;
     partnership_types: Schema.Attribute.Text;
+    post_event_survey: Schema.Attribute.Text;
     priority_sector: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    regulatory_or_policy_changes: Schema.Attribute.Text;
+    requests_for_the_business_forum: Schema.Attribute.Text;
+    stakeholders_or_industries: Schema.Attribute.Text;
     type_of_investment: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

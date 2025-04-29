@@ -4,7 +4,8 @@
   "info": {
     "singularName": "b2b",
     "pluralName": "b2bs",
-    "displayName": "b2b"
+    "displayName": "b2b",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -34,6 +35,21 @@
       "type": "text"
     },
     "main_attending_objectives": {
+      "type": "text"
+    },
+    "investment_size": {
+      "type": "text"
+    },
+    "stakeholders_or_industries": {
+      "type": "text"
+    },
+    "regulatory_or_policy_changes": {
+      "type": "text"
+    },
+    "post_event_survey": {
+      "type": "text"
+    },
+    "requests_for_the_business_forum": {
       "type": "text"
     }
   }
