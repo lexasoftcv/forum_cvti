@@ -4,7 +4,8 @@
   "info": {
     "singularName": "partecipante",
     "pluralName": "partecipantes",
-    "displayName": "partecipante"
+    "displayName": "partecipante",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -30,19 +31,17 @@
     "genero": {
       "type": "string"
     },
-    "telemovel": {
-      "type": "integer"
-    },
     "url_linkedin": {
       "type": "text"
     },
     "foto_perfil": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "tipo_organizacao": {
       "type": "text"
@@ -71,10 +70,19 @@
     "setor_principal_da_organizacao": {
       "type": "text"
     },
-    "montante_investimento": {
-      "type": "decimal"
-    },
     "about_me": {
+      "type": "text"
+    },
+    "data_protection": {
+      "type": "text"
+    },
+    "terms_e_conditions": {
+      "type": "text"
+    },
+    "telemovel": {
+      "type": "text"
+    },
+    "montante_investimento": {
       "type": "text"
     }
   }

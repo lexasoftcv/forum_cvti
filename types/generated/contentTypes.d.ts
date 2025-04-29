@@ -414,6 +414,7 @@ export interface ApiPartecipantePartecipante
   extends Struct.CollectionTypeSchema {
   collectionName: 'partecipantes';
   info: {
+    description: '';
     displayName: 'partecipante';
     pluralName: 'partecipantes';
     singularName: 'partecipante';
@@ -434,6 +435,7 @@ export interface ApiPartecipantePartecipante
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    data_protection: Schema.Attribute.Text;
     email: Schema.Attribute.Email;
     foto_perfil: Schema.Attribute.Media<'images' | 'files'>;
     genero: Schema.Attribute.String;
@@ -443,7 +445,7 @@ export interface ApiPartecipantePartecipante
       'oneToMany',
       'api::partecipante.partecipante'
     >;
-    montante_investimento: Schema.Attribute.Decimal;
+    montante_investimento: Schema.Attribute.Text;
     nacionalidade: Schema.Attribute.Text;
     nome: Schema.Attribute.Text;
     nome_organizacao: Schema.Attribute.Text;
@@ -451,7 +453,8 @@ export interface ApiPartecipantePartecipante
     publishedAt: Schema.Attribute.DateTime;
     setor_principal_da_organizacao: Schema.Attribute.Text;
     sobrenome: Schema.Attribute.String;
-    telemovel: Schema.Attribute.Integer;
+    telemovel: Schema.Attribute.Text;
+    terms_e_conditions: Schema.Attribute.Text;
     tipo_organizacao: Schema.Attribute.Text;
     titulo: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
