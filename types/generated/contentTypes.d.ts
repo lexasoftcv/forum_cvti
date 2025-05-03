@@ -396,6 +396,10 @@ export interface ApiB2BB2B extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::b2b.b2b'>;
     main_attending_objectives: Schema.Attribute.Text;
+    partecipante: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::partecipante.partecipante'
+    >;
     partnership_types: Schema.Attribute.Text;
     post_event_survey: Schema.Attribute.Text;
     priority_sector: Schema.Attribute.Text;
@@ -432,12 +436,11 @@ export interface ApiPartecipantePartecipante
     area_sede_organizacao: Schema.Attribute.Text;
     cargo: Schema.Attribute.Text;
     cidade: Schema.Attribute.Text;
+    country_of_residence: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    data_protection: Schema.Attribute.Text;
     email: Schema.Attribute.Email;
-    foto_perfil: Schema.Attribute.Media<'images' | 'files'>;
     genero: Schema.Attribute.String;
     locale: Schema.Attribute.String;
     localidade_sede_organizacao: Schema.Attribute.Text;
@@ -448,19 +451,18 @@ export interface ApiPartecipantePartecipante
     montante_investimento: Schema.Attribute.Text;
     nacionalidade: Schema.Attribute.Text;
     nome: Schema.Attribute.Text;
-    nome_organizacao: Schema.Attribute.Text;
     pais_atuacao: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     setor_principal_da_organizacao: Schema.Attribute.Text;
     sobrenome: Schema.Attribute.String;
+    special_needs: Schema.Attribute.Text;
     telemovel: Schema.Attribute.Text;
     terms_e_conditions: Schema.Attribute.Text;
-    tipo_organizacao: Schema.Attribute.Text;
     titulo: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    url_linkedin: Schema.Attribute.Text;
+    website_link: Schema.Attribute.Text;
   };
 }
 

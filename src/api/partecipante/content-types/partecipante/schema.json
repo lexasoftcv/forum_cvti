@@ -31,24 +31,6 @@
     "genero": {
       "type": "string"
     },
-    "url_linkedin": {
-      "type": "text"
-    },
-    "foto_perfil": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
-    "tipo_organizacao": {
-      "type": "text"
-    },
-    "nome_organizacao": {
-      "type": "text"
-    },
     "cargo": {
       "type": "text"
     },
@@ -73,9 +55,6 @@
     "about_me": {
       "type": "text"
     },
-    "data_protection": {
-      "type": "text"
-    },
     "terms_e_conditions": {
       "type": "text"
     },
@@ -83,6 +62,15 @@
       "type": "text"
     },
     "montante_investimento": {
+      "type": "text"
+    },
+    "country_of_residence": {
+      "type": "text"
+    },
+    "website_link": {
+      "type": "text"
+    },
+    "special_needs": {
       "type": "text"
     }
   }

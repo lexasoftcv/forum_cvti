@@ -51,6 +51,11 @@
     },
     "requests_for_the_business_forum": {
       "type": "text"
+    },
+    "partecipante": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::partecipante.partecipante"
     }
   }
 }
