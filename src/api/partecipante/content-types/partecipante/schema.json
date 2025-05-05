@@ -72,6 +72,15 @@
     },
     "special_needs": {
       "type": "text"
+    },
+    "tipo_organizacao": {
+      "type": "text"
+    },
+    "nome_organizacao": {
+      "type": "text"
+    },
+    "dias_pretendidos": {
+      "type": "text"
     }
   }
 }

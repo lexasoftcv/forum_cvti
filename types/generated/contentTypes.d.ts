@@ -440,6 +440,7 @@ export interface ApiPartecipantePartecipante
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    dias_pretendidos: Schema.Attribute.Text;
     email: Schema.Attribute.Email;
     genero: Schema.Attribute.String;
     locale: Schema.Attribute.String;
@@ -451,6 +452,7 @@ export interface ApiPartecipantePartecipante
     montante_investimento: Schema.Attribute.Text;
     nacionalidade: Schema.Attribute.Text;
     nome: Schema.Attribute.Text;
+    nome_organizacao: Schema.Attribute.Text;
     pais_atuacao: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     setor_principal_da_organizacao: Schema.Attribute.Text;
@@ -458,6 +460,7 @@ export interface ApiPartecipantePartecipante
     special_needs: Schema.Attribute.Text;
     telemovel: Schema.Attribute.Text;
     terms_e_conditions: Schema.Attribute.Text;
+    tipo_organizacao: Schema.Attribute.Text;
     titulo: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
