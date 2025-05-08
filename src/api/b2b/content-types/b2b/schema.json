@@ -56,6 +56,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::partecipante.partecipante"
+    },
+    "data_consent": {
+      "type": "date"
     }
   }
 }
