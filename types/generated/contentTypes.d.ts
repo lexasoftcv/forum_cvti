@@ -391,7 +391,7 @@ export interface ApiB2BB2B extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    data_consent: Schema.Attribute.Date;
+    data_consent: Schema.Attribute.Text;
     interest_detail: Schema.Attribute.Text;
     investment_size: Schema.Attribute.Text;
     locale: Schema.Attribute.String;

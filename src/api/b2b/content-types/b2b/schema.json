@@ -58,7 +58,7 @@
       "target": "api::partecipante.partecipante"
     },
     "data_consent": {
-      "type": "date"
+      "type": "text"
     }
   }
 }
