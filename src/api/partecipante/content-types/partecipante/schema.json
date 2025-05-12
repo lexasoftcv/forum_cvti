@@ -81,6 +81,9 @@
     },
     "dias_pretendidos": {
       "type": "text"
+    },
+    "linkedin_url": {
+      "type": "text"
     }
   }
 }

@@ -59,6 +59,9 @@
     },
     "data_consent": {
       "type": "text"
+    },
+    "foto": {
+      "type": "text"
     }
   }
 }

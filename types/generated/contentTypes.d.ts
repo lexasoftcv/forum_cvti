@@ -392,6 +392,7 @@ export interface ApiB2BB2B extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     data_consent: Schema.Attribute.Text;
+    foto: Schema.Attribute.Text;
     interest_detail: Schema.Attribute.Text;
     investment_size: Schema.Attribute.Text;
     locale: Schema.Attribute.String;
@@ -444,6 +445,7 @@ export interface ApiPartecipantePartecipante
     dias_pretendidos: Schema.Attribute.Text;
     email: Schema.Attribute.Email;
     genero: Schema.Attribute.String;
+    linkedin_url: Schema.Attribute.Text;
     locale: Schema.Attribute.String;
     localidade_sede_organizacao: Schema.Attribute.Text;
     localizations: Schema.Attribute.Relation<
