@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventos",
+  "info": {
+    "singularName": "evento",
+    "pluralName": "eventos",
+    "displayName": "Evento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nome": {
+      "type": "text"
+    },
+    "data_inicio": {
+      "type": "string"
+    },
+    "data_fim": {
+      "type": "text"
+    },
+    "promotor": {
+      "type": "string"
+    },
+    "local": {
+      "type": "text"
+    },
+    "descricao": {
+      "type": "text"
+    }
+  }
+}
