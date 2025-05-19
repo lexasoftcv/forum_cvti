@@ -416,6 +416,36 @@ export interface ApiB2BB2B extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOcorenciaOcorencia extends Struct.CollectionTypeSchema {
+  collectionName: 'ocorencias';
+  info: {
+    displayName: 'Ocorencia';
+    pluralName: 'ocorencias';
+    singularName: 'ocorencia';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    event_id: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ocorencia.ocorencia'
+    > &
+      Schema.Attribute.Private;
+    partecipante_id: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    type: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPartecipantePartecipante
   extends Struct.CollectionTypeSchema {
   collectionName: 'partecipantes';
@@ -982,6 +1012,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::b2b.b2b': ApiB2BB2B;
+      'api::ocorencia.ocorencia': ApiOcorenciaOcorencia;
       'api::partecipante.partecipante': ApiPartecipantePartecipante;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

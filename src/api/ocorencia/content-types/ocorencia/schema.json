@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ocorencias",
+  "info": {
+    "singularName": "ocorencia",
+    "pluralName": "ocorencias",
+    "displayName": "Ocorencia"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "partecipante_id": {
+      "type": "text"
+    },
+    "event_id": {
+      "type": "string"
+    }
+  }
+}
