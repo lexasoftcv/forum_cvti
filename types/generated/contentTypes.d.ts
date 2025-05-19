@@ -535,6 +535,35 @@ export interface ApiPartecipantePartecipante
   };
 }
 
+export interface ApiValidacaoValidacao extends Struct.CollectionTypeSchema {
+  collectionName: 'validacaos';
+  info: {
+    displayName: 'Validacao';
+    pluralName: 'validacaos';
+    singularName: 'validacao';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    event_id: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::validacao.validacao'
+    > &
+      Schema.Attribute.Private;
+    partecipante_id: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1048,6 +1077,7 @@ declare module '@strapi/strapi' {
       'api::evento.evento': ApiEventoEvento;
       'api::ocorencia.ocorencia': ApiOcorenciaOcorencia;
       'api::partecipante.partecipante': ApiPartecipantePartecipante;
+      'api::validacao.validacao': ApiValidacaoValidacao;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
